@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Calculator</title>
+	<link href="style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+
+<div class="container">
+	
+	<h1>Quersumme</h1>
+	<p>Calculating the sum of words and numbers for numerology. The calculator outputs a total value from 1 to 9, adding all the letters of the name, title, number, date, and any text into numbers and digits. The calculator works with numbers, and different languages.</p>
+	<hr>
+
+	<div class="calc-container">
+
+		<div class="lang-select">
+			<label for="langSelect" class="lang-select">Please choose your language</label>
+			<select name="lang" id="langSelect" onchange="chooseLang(this)">
+				<option selected value="en">English</option>
+				<option value="ru">Russian</option>
+				<option value="sp">Spahish</option>
+				<option value="eu">European</option> 
+			</select>
+		</div>
+
+		<div class="form-group">
+			<input type="text" id="calcInput" placeholder="Enter something" autocomplete="off">
+			<label for="calcInput" class="input-label">Enter something</label>
+		</div>
+		
+		<div class="radio">
+			<label><input type="radio" id="option" onchange="setRadio()" name="check" value="0" checked> all</label>
+			<label><input type="radio" id="option" onchange="setRadio()" name="check" value="1"> only letters</label>
+			<label><input type="radio" id="option" onchange="setRadio()" name="check" value="2"> only digits</label>
+			<label><input type="radio" id="option" onchange="setRadio()" name="check" value="3"> consonant</label>
+			<label><input type="radio" id="option" onchange="setRadio()" name="check" value="4"> vowel</label>
+		</div>
+	
+		<div class="checkbox">
+			<label>use digits <input type="checkbox" onchange="setCheckBox()" name="digit" value="1" disabled id="check1"></label>
+		</div>
+	
+		<div class="btn">
+			<input type="submit" value="Press to calculate" onclick="сalculate()" style="display: block;">
+		</div>
+	<hr>
+		<div class="result">
+			<span>Result: </span><p id="result"></p>
+		</div>
+			
+	</div>
+
+</div>
+	<script src="script.js"></script>
+</body>
+</html>
